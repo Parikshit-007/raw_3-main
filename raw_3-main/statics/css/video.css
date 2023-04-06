@@ -89,9 +89,9 @@ h1 {
 
 .para_in {
     border: 1px solid #415a77;
-    width: 884px;
+    width: 900px;
     height: 420px;
-    padding-right: 15px;
+    /* padding-right: 15px; */
     /* overflow-y: auto; */
     background: none;
 }

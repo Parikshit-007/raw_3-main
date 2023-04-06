@@ -109,7 +109,7 @@
                                         {% for video in videos|slice:":4" %}
                                         <a href="{% url 'video_view' video_id=video.id %}">
                                             <div class="list_item">
-                                                <div class="no"></div>
+                                                <div class="no">{{forloop.counter}}.</div>
                                                 <div class="file">{{video.title}}</div>
                                                 <div class="date">{{ video.upload_date|date:"F j, Y" }}</div>
                                             </div>
@@ -148,7 +148,7 @@
                                 {% for video in videos %}
                                 <a href="{% url 'video_view' video_id=video.id %}">
                                     <div class="list_item">
-                                        <div class="no"></div>
+                                        <div class="no">{{forloop.counter}}.</div>
                                         <div class="file">{{video.title}}</div>
                                         <div class="date">{{ video.upload_date|date:"F j, Y" }}</div>
                                     </div>

@@ -22,8 +22,8 @@ class Dashboard(View):
         #except Summary.DoesNotExist:
        #     summary = None
        # summary = summary_view(request, user, page='dashboard')
-        videos = Video.objects.filter(user=user)
-        summary=Video.objects.all()
+        videos = Video.objects.order_by('-upload_date')
+        summary=Video.objects.order_by('-upload_date')
       #  summaries = Summary.objects.filter(user=user)
        # summary=Summary.objects.get(id=user_id)
       #  userr=Video.objects.get(id=user_id)
